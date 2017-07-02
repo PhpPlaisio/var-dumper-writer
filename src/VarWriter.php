@@ -29,72 +29,62 @@ interface VarWriter
   /**
    * Will be called before dumping the elements of an array.
    *
-   * @param int    $id      The ID of the array.
-   * @param string $name    The name of the variable.
-   * @param string $keyType When the name of the variable is key of an array the type of the key (int or string).
+   * @param int    $id   The ID of the array.
+   * @param string $name The name of the variable.
    */
-  public function writeArrayOpen($id, $name, $keyType);
+  public function writeArrayOpen($id, $name);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Dumps a reference to an array.
    *
-   * @param int    $ref     The ID of the array that has been dumped already.
-   * @param string $name    The name of the variable.
-   * @param string $keyType When the name of the variable is key of an array the type of the key (int or string).
+   * @param int    $ref  The ID of the array that has been dumped already.
+   * @param string $name The name of the variable.
    */
-  public function writeArrayReference($ref, $name, $keyType);
+  public function writeArrayReference($ref, $name);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Dumps a boolean.
    *
-   * @param int|null $id      The ID of the value.
-   * @param int|null $ref     The ID of the value if the variable is a reference to a value that has been dumped
-   *                          already.
-   * @param bool     $value   The boolean.
-   * @param string   $name    The name of the variable.
-   * @param string   $keyType When the name of the variable is key of an array the type of the key (int or string).
+   * @param int|null $id    The ID of the value.
+   * @param int|null $ref   The ID of the value if the variable is a reference to a value that has been dumped already.
+   * @param bool     $value The boolean.
+   * @param string   $name  The name of the variable.
    */
-  public function writeBool($id, $ref, &$value, $name, $keyType);
+  public function writeBool($id, $ref, &$value, $name);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Dumps a float.
    *
-   * @param int|null $id      The ID of the value.
-   * @param int|null $ref     The ID of the value if the variable is a reference to a value that has been dumped
-   *                          already.
-   * @param bool     $value   The value.
-   * @param string   $name    The name of the variable.
-   * @param string   $keyType When the name of the variable is key of an array the type of the key (int or string).
+   * @param int|null $id    The ID of the value.
+   * @param int|null $ref   The ID of the value if the variable is a reference to a value that has been dumped already.
+   * @param bool     $value The value.
+   * @param string   $name  The name of the variable.
    */
-  public function writeFloat($id, $ref, &$value, $name, $keyType);
+  public function writeFloat($id, $ref, &$value, $name);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Dumps an integer.
    *
-   * @param int|null $id      The ID of the value.
-   * @param int|null $ref     The ID of the value if the variable is a reference to a value that has been dumped
-   *                          already.
-   * @param bool     $value   The value.
-   * @param string   $name    The name of the variable.
-   * @param string   $keyType When the name of the variable is key of an array the type of the key (int or string).
+   * @param int|null $id    The ID of the value.
+   * @param int|null $ref   The ID of the value if the variable is a reference to a value that has been dumped already.
+   * @param bool     $value The value.
+   * @param string   $name  The name of the variable.
    */
-  public function writeInt($id, $ref, &$value, $name, $keyType);
+  public function writeInt($id, $ref, &$value, $name);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Dumps a null.
    *
-   * @param int|null $id      The ID of the value.
-   * @param int|null $ref     The ID of the value if the variable is a reference to a value that has been dumped
-   *                          already.
-   * @param string   $name    The name of the variable.
-   * @param string   $keyType When the name of the variable is key of an array the type of the key (int or string).
+   * @param int|null $id   The ID of the value.
+   * @param int|null $ref  The ID of the value if the variable is a reference to a value that has been dumped already.
+   * @param string   $name The name of the variable.
    */
-  public function writeNull($id, $ref, $name, $keyType);
+  public function writeNull($id, $ref, $name);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -106,58 +96,43 @@ interface VarWriter
   /**
    * Will be called before dumping the fields of an object.
    *
-   * @param int    $id      The ID of the object.
-   * @param string $name    The name of the variable.
-   * @param string $keyType When the name of the variable is key of an array the type of the key (int or string).
-   * @param string $class   The name of the class.
+   * @param int    $id    The ID of the object.
+   * @param string $name  The name of the variable.
+   * @param string $class The name of the class.
    */
-  public function writeObjectOpen($id, $name, $keyType, $class);
+  public function writeObjectOpen($id, $name, $class);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Dumps a reference to an object.
    *
-   * @param int    $ref     The ID of the object that has been dumped already.
-   * @param string $name    The name of the variable.
-   * @param string $keyType When the name of the variable is key of an array the type of the key (int or string).
-   * @param string $class   The name of the class.
+   * @param int    $ref   The ID of the object that has been dumped already.
+   * @param string $name  The name of the variable.
+   * @param string $class The name of the class.
    */
-  public function writeObjectReference($ref, $name, $keyType, $class);
+  public function writeObjectReference($ref, $name, $class);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Dumps a resource.
    *
-   * @param int    $id      The ID of the resource.
-   * @param string $name    The name of the variable.
-   * @param string $keyType When the name of the variable is key of an array the type of the key (int or string).
-   * @param string $type    The type of the resource.
+   * @param int|null $id   The ID of the resource.
+   * @param int|null $ref  The ID of the value if the variable is a reference to a value that has been dumped already.
+   * @param string   $name The name of the variable.
+   * @param string   $type The type of the resource.
    */
-  public function writeResource($id, $name, $keyType, $type);
-
-  //--------------------------------------------------------------------------------------------------------------------
-  /**
-   * Dumps a reference to resource.
-   *
-   * @param int    $ref     The ID of the referenced resource.
-   * @param string $name    The name of the variable.
-   * @param string $keyType When the name of the variable is key of an array the type of the key (int or string).
-   * @param string $type    The type of the resource.
-   */
-  public function writeResourceReference($ref, $name, $keyType, $type);
+  public function writeResource($id, $ref, $name, $type);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Dumps a string.
    *
-   * @param int|null $id      The ID of the value.
-   * @param int|null $ref     The ID of the value if the variable is a reference to a value that has been dumped
-   *                          already.
-   * @param bool     $value   The value.
-   * @param string   $name    The name of the variable.
-   * @param string   $keyType When the name of the variable is key of an array the type of the key (int or string).
+   * @param int|null $id    The ID of the value.
+   * @param int|null $ref   The ID of the value if the variable is a reference to a value that has been dumped already.
+   * @param string   $value The value.
+   * @param string   $name  The name of the variable.
    */
-  public function writeString($id, $ref, &$value, $name, $keyType);
+  public function writeString($id, $ref, &$value, $name);
 
   //--------------------------------------------------------------------------------------------------------------------
 }
