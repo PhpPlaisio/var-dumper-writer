@@ -22,8 +22,11 @@ interface VarWriter
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Will be called when all elements of an array have been dumped.
+   *
+   * @param int    $id   The ID of the array.
+   * @param string $name The name of the variable.
    */
-  public function writeArrayClose();
+  public function writeArrayClose($id, $name);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -89,8 +92,12 @@ interface VarWriter
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Will be called when all fields of an object have been dumped.
+   *
+   * @param int    $id    The ID of the object.
+   * @param string $name  The name of the variable.
+   * @param string $class The name of the class.
    */
-  public function writeObjectClose();
+  public function writeObjectClose($id, $name, $class);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
