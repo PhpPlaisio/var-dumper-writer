@@ -1,0 +1,20 @@
+{
+  "name": "setbased/abc-var-dumper-writer",
+  "description": "ABC-Framework - Var Dumper Writer",
+  "keywords": [
+    "ABC",
+    "Framework",
+    "Var",
+    "Dumper"
+  ],
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.0.0."
+  },
+  "autoload": {
+    "psr-4": {
+      "SetBased\\Abc\\Debug\\": "src/"
+    }
+  }
+}
