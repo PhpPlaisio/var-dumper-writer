@@ -74,7 +74,7 @@ interface VarWriter
    *
    * @param int|null $id    The ID of the value.
    * @param int|null $ref   The ID of the value if the variable is a reference to a value that has been dumped already.
-   * @param bool     $value The value.
+   * @param int      $value The value.
    * @param string   $name  The name of the variable.
    */
   public function writeInt($id, $ref, &$value, $name);
