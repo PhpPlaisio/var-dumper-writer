@@ -1,5 +1,5 @@
 <?php
-//----------------------------------------------------------------------------------------------------------------------
+
 namespace SetBased\Abc\Debug;
 
 /**
@@ -10,14 +10,18 @@ interface VarWriter
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Will be called by the Var Dumper before dumping the first variable.
+   *
+   * @return void
    */
-  public function start();
+  public function start(): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Will be called by the Var Dumper after dumping the last variable.
+   *
+   * @return void
    */
-  public function stop();
+  public function stop(): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -25,8 +29,10 @@ interface VarWriter
    *
    * @param int    $id   The ID of the array.
    * @param string $name The name of the variable.
+   *
+   * @return void
    */
-  public function writeArrayClose($id, $name);
+  public function writeArrayClose(int $id, string $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -34,8 +40,10 @@ interface VarWriter
    *
    * @param int    $id   The ID of the array.
    * @param string $name The name of the variable.
+   *
+   * @return void
    */
-  public function writeArrayOpen($id, $name);
+  public function writeArrayOpen(int $id, string $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -43,8 +51,10 @@ interface VarWriter
    *
    * @param int    $ref  The ID of the array that has been dumped already.
    * @param string $name The name of the variable.
+   *
+   * @return void
    */
-  public function writeArrayReference($ref, $name);
+  public function writeArrayReference(int $ref, string $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -54,8 +64,10 @@ interface VarWriter
    * @param int|null $ref   The ID of the value if the variable is a reference to a value that has been dumped already.
    * @param bool     $value The boolean.
    * @param string   $name  The name of the variable.
+   *
+   * @return void
    */
-  public function writeBool($id, $ref, &$value, $name);
+  public function writeBool(?int $id, ?int $ref, bool &$value, string $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -65,8 +77,10 @@ interface VarWriter
    * @param int|null $ref   The ID of the value if the variable is a reference to a value that has been dumped already.
    * @param float    $value The value.
    * @param string   $name  The name of the variable.
+   *
+   * @return void
    */
-  public function writeFloat($id, $ref, &$value, $name);
+  public function writeFloat(?int $id, ?int $ref, float &$value, string $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -76,8 +90,10 @@ interface VarWriter
    * @param int|null $ref   The ID of the value if the variable is a reference to a value that has been dumped already.
    * @param int      $value The value.
    * @param string   $name  The name of the variable.
+   *
+   * @return void
    */
-  public function writeInt($id, $ref, &$value, $name);
+  public function writeInt(?int $id, ?int $ref, int &$value, string $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -86,8 +102,10 @@ interface VarWriter
    * @param int|null $id   The ID of the value.
    * @param int|null $ref  The ID of the value if the variable is a reference to a value that has been dumped already.
    * @param string   $name The name of the variable.
+   *
+   * @return void
    */
-  public function writeNull($id, $ref, $name);
+  public function writeNull(?int $id, ?int $ref, string $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -96,8 +114,10 @@ interface VarWriter
    * @param int    $id    The ID of the object.
    * @param string $name  The name of the variable.
    * @param string $class The name of the class.
+   *
+   * @return void
    */
-  public function writeObjectClose($id, $name, $class);
+  public function writeObjectClose(int $id, string $name, string $class): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -106,8 +126,10 @@ interface VarWriter
    * @param int    $id    The ID of the object.
    * @param string $name  The name of the variable.
    * @param string $class The name of the class.
+   *
+   * @return void
    */
-  public function writeObjectOpen($id, $name, $class);
+  public function writeObjectOpen(int $id, string $name, string $class): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -116,8 +138,10 @@ interface VarWriter
    * @param int    $ref   The ID of the object that has been dumped already.
    * @param string $name  The name of the variable.
    * @param string $class The name of the class.
+   *
+   * @return void
    */
-  public function writeObjectReference($ref, $name, $class);
+  public function writeObjectReference(int $ref, string $name, string $class): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -127,8 +151,10 @@ interface VarWriter
    * @param int|null $ref  The ID of the value if the variable is a reference to a value that has been dumped already.
    * @param string   $name The name of the variable.
    * @param string   $type The type of the resource.
+   *
+   * @return void
    */
-  public function writeResource($id, $ref, $name, $type);
+  public function writeResource(?int $id, ?int $ref, string $name, string $type): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -138,8 +164,10 @@ interface VarWriter
    * @param int|null $ref   The ID of the value if the variable is a reference to a value that has been dumped already.
    * @param string   $value The value.
    * @param string   $name  The name of the variable.
+   *
+   * @return void
    */
-  public function writeString($id, $ref, &$value, $name);
+  public function writeString(?int $id, ?int $ref, string &$value, ?string $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
 }
