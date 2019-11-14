@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace SetBased\Abc\Debug;
+namespace Plaisio\Debug;
 
 /**
- * Interface for classes for writing a var dump into a desired format to a desired destination.
+ * Interface for writing a var dump into a desired format to a desired destination.
  */
 interface VarWriter
 {

@@ -1,8 +1,8 @@
 {
-  "name": "setbased/abc-var-dumper-writer",
-  "description": "ABC-Framework: Var Dumper Writer",
+  "name": "plaisio/var-dumper-writer",
+  "description": "PhpPlaisio: Var Dumper Writer",
   "keywords": [
-    "ABC-Framework",
+    "PhpPlaisio",
     "Var",
     "Dumper"
   ],
@@ -12,7 +12,7 @@
   },
   "autoload": {
     "psr-4": {
-      "SetBased\\Abc\\Debug\\": "src/"
+      "Plaisio\\Debug\\": "src/"
     }
   }
 }

@@ -1,4 +1,4 @@
-# ABC-Framework: Var Dumper Writer
+# PhpPlaisio: Var Dumper Writer
 
 <table>
 <thead>
@@ -11,14 +11,21 @@
 <tbody>
 <tr>
 <td>
-<a href="https://gitter.im/SetBased/php-abc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/SetBased/php-abc.svg" alt="Gitter"/></a>
+<a href="https://gitter.im/PhpPlaisio/PhpPlaisio"><img src="https://badges.gitter.im/PhpPlaisio/PhpPlaisio.svg" alt="Gitter"/></a>
 </td>
 <td>
-<a href="https://packagist.org/packages/setbased/abc-var-dumper-writer"><img src="https://poser.pugx.org/setbased/abc-var-dumper-writer/license" alt="License"/></a>
+<a href="https://packagist.org/packages/plaisio/var-dumper-writer"><img src="https://poser.pugx.org/plaisio/var-dumper-writer/license" alt="License"/></a>
 </td>
 <td>
-<a href="https://packagist.org/packages/setbased/abc-var-dumper-writer"><img src="https://poser.pugx.org/setbased/abc-var-dumper-writer/v/stable" alt="Latest Stable Version"/></a>
+<a href="https://packagist.org/packages/plaisio/var-dumper-writer"><img src="https://poser.pugx.org/plaisio/var-dumper-writer/v/stable" alt="Latest Stable Version"/></a>
 </td>
 </tr>
 </tbody>
-</table>
+</table>  
+
+Interface for writing a var dump into a desired format to a desired destination.
+
+# License
+
+This project is licensed under the MIT license.
+
