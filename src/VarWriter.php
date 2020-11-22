@@ -177,6 +177,16 @@ interface VarWriter
   public function writeString(?int $id, ?int $ref, string &$value, $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Dumps an uninitialized property.
+   *
+   * @param string|int|null $name The name of the property.
+   *
+   * @return void
+   */
+  public function writeUninitialized($name): void;
+
+  //--------------------------------------------------------------------------------------------------------------------
 }
 
 //----------------------------------------------------------------------------------------------------------------------
