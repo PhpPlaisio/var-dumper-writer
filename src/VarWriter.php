@@ -33,7 +33,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeArrayClose(int $id, $name): void;
+  public function writeArrayClose(int $id, mixed $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -44,7 +44,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeArrayOpen(int $id, $name): void;
+  public function writeArrayOpen(int $id, mixed $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -55,7 +55,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeArrayReference(int $ref, $name): void;
+  public function writeArrayReference(int $ref, mixed $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -69,7 +69,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeBool(?int $id, ?int $ref, bool &$value, $name): void;
+  public function writeBool(?int $id, ?int $ref, bool &$value, mixed $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -83,7 +83,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeFloat(?int $id, ?int $ref, float &$value, $name): void;
+  public function writeFloat(?int $id, ?int $ref, float &$value, mixed $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -97,7 +97,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeInt(?int $id, ?int $ref, int &$value, $name): void;
+  public function writeInt(?int $id, ?int $ref, int &$value, mixed $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -110,7 +110,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeNull(?int $id, ?int $ref, $name): void;
+  public function writeNull(?int $id, ?int $ref, mixed $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -122,7 +122,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeObjectClose(int $id, $name, string $class): void;
+  public function writeObjectClose(int $id, mixed $name, string $class): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -134,7 +134,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeObjectOpen(int $id, $name, string $class): void;
+  public function writeObjectOpen(int $id, mixed $name, string $class): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -146,7 +146,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeObjectReference(int $ref, $name, string $class): void;
+  public function writeObjectReference(int $ref, mixed $name, string $class): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -160,7 +160,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeResource(?int $id, ?int $ref, $name, string $type): void;
+  public function writeResource(?int $id, ?int $ref, mixed $name, string $type): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -174,7 +174,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeString(?int $id, ?int $ref, string &$value, $name): void;
+  public function writeString(?int $id, ?int $ref, string &$value, mixed $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -184,7 +184,7 @@ interface VarWriter
    *
    * @return void
    */
-  public function writeUninitialized($name): void;
+  public function writeUninitialized(mixed $name): void;
 
   //--------------------------------------------------------------------------------------------------------------------
 }
